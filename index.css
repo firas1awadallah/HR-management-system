@@ -1,0 +1,28 @@
+body{
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+header ,footer {
+    background-color: gray;
+    padding: 15px;
+} 
+footer{
+    margin-top: auto;
+}
+a{
+    margin-left: 40px;
+}
+ul li {
+    display: inline-block;
+}
+ul li a {
+    text-decoration: none;
+}
+form{
+    border:black solid 1px;
+    font-size: 20px;
+    margin-top: 20px;
+     margin-right: 900px;
+}
