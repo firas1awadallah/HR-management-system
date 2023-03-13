@@ -76,13 +76,13 @@ let sec = document.getElementById("sec")
 
 
 
-    let employee1 = new Employee("Ghazi Samer","Administration","Senior","../assets/Ghazi.jpg");
-    let employee2 = new Employee("Lana Ali","Finance","Senior","../assets/Lana.jpg");
-    let employee3 = new Employee("Tamara Ayoub","Marketing","Senior","../assets/Tamara.jpg");
-    let employee4 = new Employee("Safi Walid","Administration","Mid-Senior","../assets/Safi.jpg");
-    let employee5 = new Employee("Omar Zaid","Development","Senior","../assets/Omar.jpg");
-    let employee6 = new Employee("Rana Saleh","Development","Junior","../assets/Rana.jpg");
-    let employee7 = new Employee("Hadi Ahmad","Finance","Mid-Senior","../assets/Hadi.jpg");
+    let employee1 = new Employee("Ghazi Samer","Administration","Senior","./assets/Ghazi.jpg");
+    let employee2 = new Employee("Lana Ali","Finance","Senior","./assets/Lana.jpg");
+    let employee3 = new Employee("Tamara Ayoub","Marketing","Senior","./assets/Tamara.jpg");
+    let employee4 = new Employee("Safi Walid","Administration","Mid-Senior","./assets/Safi.jpg");
+    let employee5 = new Employee("Omar Zaid","Development","Senior","./assets/Omar.jpg");
+    let employee6 = new Employee("Rana Saleh","Development","Junior","./assets/Rana.jpg");
+    let employee7 = new Employee("Hadi Ahmad","Finance","Mid-Senior","./assets/Hadi.jpg");
 
 for(let i=0;i<allEmployee.length;i++){
   allEmployee[i].creatId();
