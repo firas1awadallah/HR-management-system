@@ -5,19 +5,52 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="./index.css">
 </head>
-<body> <script src="app.js"></script>
+<body> 
     <header>
-        <nav></nav>
+        <ul>
+        <li><a href="">Home</a></li>
+        <li><a href="">Accounting</a></li>
+        <li><a href="">about</a></li>
+        </ul>
     </header>
-    <main></main>
+    <main>
+        <form id="form"><label>Enter your data</label><br><br>
+            <label for="Fullname">Full name :</label>
+            <input type="text" id="Fullname"  name="Fullname"><br><br>
+            <label for="Department">Department :</label>
+            <select id="Department" name="Department" form="form">
+                <option value="Administration">Administration</option>
+                <option value="Marketing">Marketing</option>
+                <option value="Development">Development</option>
+                <option value="Finance">Finance</option>
+              </select><br><br>
+            <label for="Level">Level :</label>
+            <select id="Level" name="Level" form="form">
+                <option value="Junior">Junior</option>
+                <option value="Mid-Senior">Mid-Senior</option>
+                <option value="Senior">Senior</option>
+              </select><br><br>
+            <label for="Image">Image url :</label>
+            <input type="text" id="Image" name="Image url"><br><br>
+            <button type="submit" id="submit">submit</button>
+        </form><br><br>
+        <h2>Our Employee</h2>
+        <section id="sec">
+
+        </section>
+    </main>
+    <script src="app.js"></script>
     <footer>
-        <un>
+        
+        <ul>
             <li>@copyright 2023</li>
             <li><a href="">LinkedIn</a></li>
             <li><a href="">Instagram</a></li>
             <li><a href="">Facebook</a></li>
-        </un>
+        </ul>
     </footer>
+    
 </body>
 </html>
