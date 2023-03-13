@@ -1,4 +1,8 @@
 "use strict";
+
+const allEmployee = [];
+let form = document.getElementById("form");
+let sec = document.getElementById("sec")
  function Employee (Full_Name , Department ,Level ,Image_URL){
     this.employeeID = 0;
     this.fullName = Full_Name;
@@ -6,6 +10,7 @@
     this.level = Level;
     this.imageUrl = Image_URL;
     this.salary = 0;
+    allEmployee.push(this);
  }
 
       Employee.prototype.creatId = function  () {
@@ -28,10 +33,30 @@
      }
      
       Employee.prototype.render  = function  () {
-          document.write(`<div style="color:white ;text-align: center;background-color:#3CB371;width:25%"> <img style="margin:20px"src="${this.imageUrl}" <br><h4>  Name: ${this.fullName} -ID: ${this.employeeID}<br> Department: ${this.department} -Level: ${this.level}<br> Salary: ${this.salary}</h4><br></div>`);
+        let div = document.createElement('div');
+          sec.appendChild(div); 
+          let img = document.createElement('img');
+          img.src = this.imageUrl
+          div.appendChild(img); 
+          let h4 = document.createElement('h4');
+          h4.textContent = `Name : ${this.fullName}  ID : ${this.employeeID}`;
+          div.appendChild(h4)
+          let h41 = document.createElement('h4');
+          h41.textContent = `Department: ${this.department}  Level: ${this.level}`;
+          div.appendChild(h41)
+          let h42 = document.createElement('h4');
+          h42.textContent = `Salary: ${this.salary}`;
+          div.appendChild(h42)
+          
           }
-    
-     let form = document.getElementById("form");
+
+
+         
+
+  
+  
+        
+     
      form.addEventListener("submit",gitSubmit);
      
       function gitSubmit (event) {
@@ -49,37 +74,21 @@
          newEmployee.render();
      }
 
-     
-    
-    
-    
 
 
-   // let employee1 = new Employee(1000,"Ghazi Samer","Administration","Senior");
-   // let employee2 = new Employee(1001,"Lana Ali","Finance","Senior");
-   // let employee3 = new Employee(1002,"Tamara Ayoub","Marketing","Senior");
-   // let employee4 = new Employee(1003,"Safi Walid","Administration","Mid-Senior");
-   // let employee5 = new Employee(1004,"Omar Zaid","Development","Senior");
-   // let employee6 = new Employee(1005,"Rana Saleh","Development","Junior");
-   // let employee7 = new Employee(1006,"Hadi Ahmad","Finance","Mid-Senior");
+    let employee1 = new Employee("Ghazi Samer","Administration","Senior","../assets/Ghazi.jpg");
+    let employee2 = new Employee("Lana Ali","Finance","Senior","../assets/Lana.jpg");
+    let employee3 = new Employee("Tamara Ayoub","Marketing","Senior","../assets/Tamara.jpg");
+    let employee4 = new Employee("Safi Walid","Administration","Mid-Senior","../assets/Safi.jpg");
+    let employee5 = new Employee("Omar Zaid","Development","Senior","../assets/Omar.jpg");
+    let employee6 = new Employee("Rana Saleh","Development","Junior","../assets/Rana.jpg");
+    let employee7 = new Employee("Hadi Ahmad","Finance","Mid-Senior","../assets/Hadi.jpg");
 
-
-    // employee1.creatId();
+for(let i=0;i<allEmployee.length;i++){
+  allEmployee[i].creatId();
+  allEmployee[i].netSalary();
+  allEmployee[i].render();
+}
     
-    // employee1.netSalary();
-    // employee2.netSalary();
-    // employee3.netSalary();
-    // employee4.netSalary();
-    // employee5.netSalary();
-    // employee6.netSalary();
-    // employee7.netSalary();
-    
-    // employee1.render();
-    // employee2.render();
-    // employee3.render();
-    // employee4.render();
-    // employee5.render();
-    // employee6.render();
-    // employee7.render();
 
     

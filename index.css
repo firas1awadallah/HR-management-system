@@ -1,11 +1,11 @@
 body{
     min-height: 100vh;
-    display: flex;
+    background-color: rgba(221, 228, 235, 0.61);
     flex-direction: column;
 }
 
 header ,footer {
-    background-color: gray;
+    background-color: rgb(197, 209, 226);
     padding: 15px;
 } 
 footer{
@@ -20,9 +20,25 @@ ul li {
 ul li a {
     text-decoration: none;
 }
-form{
+form{background-color:#bac7e0;
     border:black solid 1px;
     font-size: 20px;
-    margin-top: 20px;
+    margin-top: 30px;
      margin-right: 900px;
 }
+section{
+    text-align: center;
+    
+    
+}
+div{
+    background-color:#ddd;
+    display: inline-block ; 
+    margin: 20px  ;
+}
+img{
+    margin:20px ;
+    width :350px ;
+    height : 350px ;
+}
+
