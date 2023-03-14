@@ -82,9 +82,9 @@ let sec = document.getElementById("sec")
     let employee7 = new Employee("Hadi Ahmad","Finance","Mid-Senior","./assets/Hadi.jpg");
     function renderAll (){
     for(let i=0;i<allEmployee.length;i++){
-  allEmployee[i].creatId();
-  allEmployee[i].netSalary();
-  allEmployee[i].render();
+      allEmployee[i].creatId();
+      allEmployee[i].netSalary();
+      allEmployee[i].render();
       }
    }
 
@@ -95,12 +95,12 @@ function saveData(data){
 }
 function getData(){
   let reArr = localStorage.getItem('Employee');
-  
   let objArray = JSON.parse(reArr);
-  
+    
     if(objArray != null){
-
-    for (let i = 0; i < objArray.length; i++) {
+    
+    for (let i = allEmployee.length; i < objArray.length; i++) {
+      
       new Employee(objArray[i].fullName, objArray[i].department, objArray[i].level, objArray[i].imageUrl)
       
     } 
