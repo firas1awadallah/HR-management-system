@@ -19,3 +19,11 @@
 3 add an event listener to get the data from the form.
 
 4 Creat render prototype function to render each employee information.
+
+## lab 09
+
+1 Create a js file  accounting.js
+
+2 Render each department information in a table
+
+3 Add in a table Information Number and Salary of all Employees
