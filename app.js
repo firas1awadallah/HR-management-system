@@ -3,6 +3,7 @@
 const allEmployee = [];
 let form = document.getElementById("form");
 let sec = document.getElementById("sec")
+
  function Employee (Full_Name , Department ,Level ,Image_URL){
     this.employeeID = 0;
     this.fullName = Full_Name;
@@ -49,14 +50,9 @@ let sec = document.getElementById("sec")
           div.appendChild(h42)
           
           }
-
+          
 
          
-
-  
-  
-        
-     
      form.addEventListener("submit",gitSubmit);
      
       function gitSubmit (event) {
@@ -72,6 +68,7 @@ let sec = document.getElementById("sec")
          newEmployee.creatId();
          newEmployee.netSalary();
          newEmployee.render();
+         saveData(allEmployee);
      }
 
 
@@ -83,12 +80,33 @@ let sec = document.getElementById("sec")
     let employee5 = new Employee("Omar Zaid","Development","Senior","./assets/Omar.jpg");
     let employee6 = new Employee("Rana Saleh","Development","Junior","./assets/Rana.jpg");
     let employee7 = new Employee("Hadi Ahmad","Finance","Mid-Senior","./assets/Hadi.jpg");
+    function renderAll (){
+    for(let i=0;i<allEmployee.length;i++){
+      allEmployee[i].creatId();
+      allEmployee[i].netSalary();
+      allEmployee[i].render();
+      }
+   }
 
-for(let i=0;i<allEmployee.length;i++){
-  allEmployee[i].creatId();
-  allEmployee[i].netSalary();
-  allEmployee[i].render();
+
+function saveData(data){
+  let stringArr= JSON.stringify(data);
+  localStorage.setItem('Employee', stringArr);
 }
+function getData(){
+  let reArr = localStorage.getItem('Employee');
+  let objArray = JSON.parse(reArr);
     
+    if(objArray != null){
+    
+    for (let i = allEmployee.length; i < objArray.length; i++) {
+      
+      new Employee(objArray[i].fullName, objArray[i].department, objArray[i].level, objArray[i].imageUrl)
+      
+    } 
+   }
+   
+   renderAll();
 
-    
+}
+ getData();
